@@ -106,9 +106,10 @@ Reference Material
 Videos
 ------
 
-magnetlink:
+magnetlink to download videos:  
 
-magnet:?xt=urn:btih:3cd18a7da32811869f123b05d87084a2bf24e88f&dn=marakana.com%20-%20Java%20Web%20Development%20with%20Spring%20and%20Hibernate%20%C2%AE%20vampiri6ka&tr=http%3A%2F%2Fbt2.rutracker.org%2Fann%3Fuk%3DGb8OjPC4Gc&tr=http%3A%2F%2Fretracker.local%2Fannounce
+
+magnet:?xt=urn:btih:3cd18a7da32811869f123b05d87084a2bf24e88f&dn=marakana.com%20-%20Java%20Web%20Development%20with%20Spring%20and%20Hibernate%20%C2%AE%20vampiri6ka&tr=http%3A%2F%2Fbt2.rutracker.org%2Fann%3Fuk%3DGb8OjPC4Gc&tr=http%3A%2F%2Fretracker.local%2Fannounce  
 
 
 To start working with code as teacher, do next (on linux):
@@ -119,14 +120,15 @@ $ cd marakana.com-spring-and-hibernate-code-examples/
 $ git checkout b46bdc5163f604d12864a622e4129b2df255640b  
 $ git branch b46bdc5163f604d12864a622e4129b2df255640b  
   
-Then you should Import Existing Maven Projects.
+Then you should Import Existing **Maven** Projects.
   
 
-Then you should create folders:  
+**Then you should create folders:**  
   
 src/main/java  
 src/main/resources  
   
 ===============
-Marley  
-JavaDev.ORG
+
+**Marley**  
+[javadev.org](http://javadev.org "javadev.org")
