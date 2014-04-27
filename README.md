@@ -114,19 +114,19 @@ magnet:?xt=urn:btih:3cd18a7da32811869f123b05d87084a2bf24e88f&dn=marakana.com%20-
 To start working with code as teacher, do next (on linux):
 --------------
 
-$ git clone https://github.com/code-examples/marakana.com-spring-and-hibernate-code-examples.git
-$ cd marakana.com-spring-and-hibernate-code-examples/
-$ git checkout b46bdc5163f604d12864a622e4129b2df255640b
-$ git branch b46bdc5163f604d12864a622e4129b2df255640b
-
-
+$ git clone https://github.com/code-examples/marakana.com-spring-and-hibernate-code-examples.git  
+$ cd marakana.com-spring-and-hibernate-code-examples/  
+$ git checkout b46bdc5163f604d12864a622e4129b2df255640b  
+$ git branch b46bdc5163f604d12864a622e4129b2df255640b  
+  
 Then you should Import Existing Maven Projects.
+  
 
-
-Then you should create folders:
-src/main/java
-src/main/resources
-
+Then you should create folders:  
+  
+src/main/java  
+src/main/resources  
+  
 ===============
-Marley
+Marley  
 JavaDev.ORG
