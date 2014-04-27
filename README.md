@@ -128,7 +128,7 @@ $ git branch b46bdc5163f604d12864a622e4129b2df255640b
 Then you should Import Existing **Maven** Projects.
   
 
-**Then you should create folders:**  
+**Then you should create next folders on project:**  
   
 src/main/java  
 src/main/resources  
