@@ -1,6 +1,11 @@
 [marakana.com] - spring and hibernate [09.24.2012, ENG]
 =========================
-
+  
+Release-date: September 2012  
+Run-time:  5 day course, every day has 4 videos that are about 1 hour long.  
+Video format: .mov (QuickTime Movie)  
+Resolution: 800x600 and 1024x768  
+  
 Course Outline
 --------------
 
