@@ -1,4 +1,3 @@
-
 [marakana.com] - spring and hibernate [09.24.2012, ENG]
 =========================
 
@@ -107,26 +106,31 @@ Reference Material
 Videos
 ------
 
-download with magnetlink:
+download vedeos with magnetlink:
+
+<br/><br/>
 
 magnet:?xt=urn:btih:3cd18a7da32811869f123b05d87084a2bf24e88f&dn=marakana.com%20-%20Java%20Web%20Development%20with%20Spring%20and%20Hibernate%20%C2%AE%20vampiri6ka&tr=http%3A%2F%2Fbt2.rutracker.org%2Fann%3Fuk%3DGb8OjPC4Gc&tr=http%3A%2F%2Fretracker.local%2Fannounce
 
 ===============
 
-To start working with code as teacher, do next (on linux):
-
-$ git clone https://github.com/thenewcircle/spring-hibernate-20120924.git
-$ cd spring-hibernate-20120924/
-$ git checkout b46bdc5163f604d12864a622e4129b2df255640b
-$ git branch b46bdc5163f604d12864a622e4129b2df255640b
+<h3>To start working with code as teacher, do next (on linux):</h3>
 
 
+$ git clone https://github.com/thenewcircle/spring-hibernate-20120924.git<br/>
+$ cd spring-hibernate-20120924/<br/>
+$ git checkout b46bdc5163f604d12864a622e4129b2df255640b<br/>
+$ git branch b46bdc5163f604d12864a622e4129b2df255640b<br/>
+
+
+<br/><br/>
 Then you should Import Existing Maven Projects.
 
-Then you should create folders:
-src/main/java
-src/main/resources
-
+<br/><br/>
+Then you should create folders:<br/>
+src/main/java<br/>
+src/main/resources<br/>
+<br/><br/>
 ===============
 Marley
 JavaDev.ORG
