@@ -19,8 +19,8 @@ public class Hello extends HttpServlet{
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 //		response.getWriter().println("<html><body>hello</body><html>");
-		String name = request.getParameter("name");
-		request.setAttribute("name", name);
+		String[] names = request.getParameter("names").split("\\|");
+		request.setAttribute("names", names);
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/hello.jsp");
 		requestDispatcher.forward(request,response);
 		
