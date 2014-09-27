@@ -1,39 +1,36 @@
 package com.marakana.contacts.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+public class Address{
 
-import org.hibernate.validator.constraints.NotBlank;
-
-import com.marakana.contacts.validators.ZipCode;
-
-@Entity
-public class Address extends BaseEntity {
-
-	@Column(nullable = false)
-	@NotBlank
+	private long id;
 	private String street;
 
-	@Column(nullable = false)
-	@NotBlank
+
 	private String city;
 
-	@Column(nullable = false, length = 64)
-	@NotBlank
+
 	private String state;
 
-	@Column(nullable = false, length = 64)
-	@ZipCode
-	private String zip;
+	 private String zip;
 
-	public Address() {
+	public Address(){
+		
 	}
-
+	 
 	public Address(String street, String city, String state, String zip) {
+		super();
 		this.street = street;
 		this.city = city;
 		this.state = state;
 		this.zip = zip;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getStreet() {
