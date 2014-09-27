@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [marakana.com] - spring and hibernate [09.24.2012, ENG]
 =========================
   
@@ -137,3 +138,7 @@ src/main/resources
 
 **Marley**  
 [javadev.org](http://javadev.org "javadev.org")
+=======
+spring-hibernate-practice
+=========================
+>>>>>>> 2edb8a52da13c5ec33023b5ba1b0897002cc136b
