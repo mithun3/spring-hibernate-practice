@@ -27,7 +27,7 @@ public class ContactListServlet extends HttpServlet{
 			throws ServletException, IOException {
 		try {
 			request.setAttribute("contacts", contactRepository.findAll());
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/hello.jsp");
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/contactList.jsp");
 			requestDispatcher.forward(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
