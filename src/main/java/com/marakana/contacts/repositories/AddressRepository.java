@@ -112,20 +112,12 @@ public class AddressRepository {
 			try{
 				statement.executeUpdate(
 						"delete from address where id = "+address.getId());
-				ResultSet generatedKeys = statement.getGeneratedKeys();
-				try{
-					if(generatedKeys.next())
-						address.setId(generatedKeys.getLong("id"));
-				}finally{
-					generatedKeys.close();
-				}
 			}finally{
 				statement.close();
 			}
 		}finally{
 			connection.close();
 		}
-//		return null;//TODO
 	}
 
 	public Address find(long id) throws SQLException{

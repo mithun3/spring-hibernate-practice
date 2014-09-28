@@ -111,20 +111,12 @@ public class ContactRepository {
 			try{
 				statement.executeUpdate(
 						"delete from contact where id = "+contact.getId());
-				ResultSet generatedKeys = statement.getGeneratedKeys();
-				try{
-					if(generatedKeys.next())
-						contact.setId(generatedKeys.getLong("id"));
-				}finally{
-					generatedKeys.close();
-				}
 			}finally{
 				statement.close();
 			}
 		}finally{
 			connection.close();
 		}
-//		return null;//TODO
 	}
 
 	public Contact find(long id) throws SQLException{
