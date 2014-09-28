@@ -162,7 +162,7 @@ public class AddressRepository {
 		address.setCity(resultSet.getString("city"));
 		address.setState(resultSet.getString("state"));
 		address.setZip(resultSet.getString("zip"));
-		return null;
+		return address;
 	}
 	
 }
