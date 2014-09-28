@@ -1,12 +1,14 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-<title>Hello</title>
+<title>contacts</title>
 </head>
 <body>
-<h1>Hello ${name}! From JSP</h1>
-<c:forEach var="names" items="${names}">
-	<h1>hello ${names }</h1>
-</c:forEach>
+	<h1>Contacts</h1>
+	<ul>
+		<c:forEach var="contacts" items="${contacts}">
+			<li><a href="???">${contacts.name}</a></li>
+		</c:forEach>
+	</ul>
 </body>
 </html>
