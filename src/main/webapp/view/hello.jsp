@@ -5,10 +5,11 @@
 </head>
 <body>
 	<h1>Contacts</h1>
-	<ul>
-		<c:forEach var="contacts" items="${contacts}">
-			<li><a href="???">${contacts.name}</a></li>
-		</c:forEach>
-	</ul>
+	<c:forEach var="contact" items="${contacts}">
+		<c:out value="${contact.name}" />
+	</c:forEach>
+	<c:forEach var="contact2" items="${contacts2}">
+		<c:out value="${contact2.name}" />
+	</c:forEach>
 </body>
 </html>

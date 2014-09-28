@@ -14,6 +14,16 @@ public class Contact {
 		this.name = name;
 		this.addresId = addresId;
 	}
+	
+	public Contact(long id, String name, long addresId) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.addresId = addresId;
+	}
+	
+	
+	
 	public long getId() {
 		return id;
 	}

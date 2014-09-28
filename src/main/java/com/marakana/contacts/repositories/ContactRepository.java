@@ -159,11 +159,10 @@ public class ContactRepository {
 			try{
 				ResultSet resultSet = statement.executeQuery("select * from contact");
 				try{
-					if(!resultSet.next()){
-						return null;
-					} else {
+					while(resultSet.next()){
 						contactList.add(unmarshal(resultSet));
 					}
+					return contactList;
 				}finally{
 					resultSet.close();
 				}
@@ -173,7 +172,6 @@ public class ContactRepository {
 		}finally{
 			connection.close();
 		}
-		return contactList;//TODO
 	}
 	
 	
@@ -185,7 +183,7 @@ public class ContactRepository {
 		contact.setId(resultSet.getLong("id"));
 		contact.setName(resultSet.getString("name"));
 		contact.setAddresId(resultSet.getLong("address_id"));
-		return null;
+		return contact;
 	}
 	
 }
