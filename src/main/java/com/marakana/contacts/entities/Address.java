@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Address {
 
 	@Id
-	@GeneratedValue()
+	@GeneratedValue
 	private long id;
 	@Column
 	private String street;

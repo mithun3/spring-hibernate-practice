@@ -14,8 +14,6 @@ public class Contact {
 	@Column
 	private String name;
 	@Column
-	private String phoneNumber;
-	@Column
 	private long addresId;
 
 	public Contact() {
