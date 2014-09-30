@@ -8,6 +8,7 @@
 	<input type="hidden" name="add">
 	<h2>${contact.name}</h2>
 	<ul>
+		<c:set var="address" value="${contact.address}"/>
 		<li>${address.street}</li>
 		<li>${address.state} - ${address.zip}</li>
 	</ul>

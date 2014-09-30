@@ -30,9 +30,7 @@ public class ContactServlet extends HttpServlet {
 				// get contact id from the request parameter and
 				// populate model withthe contact and address object
 				Contact contact = contactRepository.find(id);
-				Address address = contact.getAddress();
 				request.setAttribute("contact", contact);
-				request.setAttribute("address", address);
 
 				// dispatch either to the edit page or to the view page
 				if (request.getParameter("edit") != null) {
