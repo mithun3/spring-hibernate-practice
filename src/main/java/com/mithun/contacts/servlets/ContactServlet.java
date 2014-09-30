@@ -53,7 +53,7 @@ public class ContactServlet extends HttpServlet {
 						request.getParameter("city"),
 						request.getParameter("state"),
 						request.getParameter("zip"));
-				address = addressRepository.save(address);
+//				address = addressRepository.save(address);
 				Contact contact = new Contact(request.getParameter("name"),
 						address);
 				contact = contactRepository.save(contact);
@@ -70,15 +70,12 @@ public class ContactServlet extends HttpServlet {
 				address.setState(request.getParameter("state"));
 				address.setZip(request.getParameter("zip"));
 				contactRepository.save(contact);
-				addressRepository.save(address);
 				response.sendRedirect("contact?id=" + contact.getId());
 			} else if (request.getParameter("delete") != null) {
 				// look up exiting contact and address fields and delete
 				long id = Long.parseLong(request.getParameter("id"));
 				Contact contact = contactRepository.find(id);
-				Address address = contact.getAddress();
 				contactRepository.delete(contact);
-				addressRepository.delete(address);
 				response.sendRedirect("contacts");
 			} else
 				super.doPost(request, response);
