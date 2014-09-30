@@ -1,7 +1,6 @@
 package com.mithun.contacts.servlets;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,6 +15,10 @@ import com.marakana.contacts.repositories.ContactRepository;
 
 @WebServlet("/contact")
 public class ContactServlet extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public final AddressRepository addressRepository = new AddressRepository();
 	public final ContactRepository contactRepository = new ContactRepository();
 
