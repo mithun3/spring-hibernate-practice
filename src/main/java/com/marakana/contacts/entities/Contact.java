@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Contact {
@@ -13,24 +14,24 @@ public class Contact {
 	private long id;
 	@Column
 	private String name;
-	@Column
-	private long addresId;
+	@OneToOne
+	private Address address;
 
 	public Contact() {
 	}
 
-	public Contact(String name, long addresId) {
+	public Contact(String name, Address address) {
 		super();
 		this.name = name;
-		this.addresId = addresId;
+		this.address = address;
 	}
 	
 
-	public Contact(long id, String name, long addresId) {
+	public Contact(long id, String name, Address address) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.addresId = addresId;
+		this.address = address;
 	}
 
 	public long getId() {
@@ -49,12 +50,14 @@ public class Contact {
 		this.name = name;
 	}
 
-	public long getAddresId() {
-		return addresId;
+	public Address getAddress() {
+		return address;
 	}
 
-	public void setAddresId(long addresId) {
-		this.addresId = addresId;
+	public void setAddress(Address address) {
+		this.address = address;
 	}
+
+
 
 }
