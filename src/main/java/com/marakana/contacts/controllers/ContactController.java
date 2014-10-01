@@ -24,24 +24,25 @@ public class ContactController {
 	@Autowired
 	private ContactRepository contactRepository;
 
-	@RequestMapping(value="/contacts", method=RequestMethod.GET)
-	public String getContactList(Model model){
-		model.addAttribute("contacts",contactRepository.findAll());
+	@RequestMapping(value = "/contacts", method = RequestMethod.GET)
+	public String getContactList(Model model) {
+		model.addAttribute("contacts", contactRepository.findAll());
 		return "contact/list";
 	}
-	
-	@RequestMapping(value="/contact", params="add", method=RequestMethod.GET)
-	public String getAddContact(){
+
+	@RequestMapping(value = "/contact", params = "add", method = RequestMethod.GET)
+	public String getAddContact() {
 		return "contact/add";
 	}
-	
-	@RequestMapping(value="/contact", params="edit", method=RequestMethod.GET)
-	public String getEditContact(@RequestParam long id, Model model){
+
+	@RequestMapping(value = "/contact", params = "edit", method = RequestMethod.GET)
+	public String getEditContact(@RequestParam long id, Model model) {
 		model.addAttribute("contact", contactRepository.findOne(id));
 		return "contact/edit";
 	}
-	@RequestMapping(value="/contact", method=RequestMethod.GET)
-	public String getViewContact(@RequestParam long id, Model model){
+
+	@RequestMapping(value = "/contact", method = RequestMethod.GET)
+	public String getViewContact(@RequestParam long id, Model model) {
 		model.addAttribute("contact", contactRepository.findOne(id));
 		return "contact/view";
 	}
@@ -55,40 +56,26 @@ public class ContactController {
 		contact = contactRepository.save(contact);
 		return "redirect:contact?id=" + contact.getId();
 	}
-	@RequestMapping(value="/contact", method=RequestMethod.POST)
-	public void postContact(HttpServletRequest request, 
-			HttpServletResponse response) throws ServletException, IOException {
-		if(request.getParameter("add")!=null){
-			// create new contact and address from the form using request
-			// parameters and persist
-			Address address = new Address(request.getParameter("street"),
-					request.getParameter("city"),
-					request.getParameter("state"),
-					request.getParameter("zip"));
-//			address = addressRepository.save(address);
-			Contact contact = new Contact(request.getParameter("name"),
-					address);
-			contact = contactRepository.save(contact);
-			//redirect ot contact page
-			response.sendRedirect("contact?id=" + contact.getId());
-		}else if (request.getParameter("edit") != null) {
-			// look up exiting contact and address fields and persist
-			long id = Long.parseLong(request.getParameter("id"));
-			Contact contact = contactRepository.findOne(id);
-			Address address = contact.getAddress();
-			contact.setName(request.getParameter("name"));
-			address.setStreet(request.getParameter("street"));
-			address.setCity(request.getParameter("city"));
-			address.setState(request.getParameter("state"));
-			address.setZip(request.getParameter("zip"));
-			contactRepository.save(contact);
-			response.sendRedirect("contact?id=" + contact.getId());
-		} else if (request.getParameter("delete") != null) {
-			// look up exiting contact and address fields and delete
-			long id = Long.parseLong(request.getParameter("id"));
-			Contact contact = contactRepository.findOne(id);
-			contactRepository.delete(contact);
-			response.sendRedirect("contacts");
-		}
+
+	@RequestMapping(value = "/contact", params = "edit", method = RequestMethod.POST)
+	public String postEditContact(@RequestParam long id,
+			@RequestParam String name, @RequestParam String street,
+			@RequestParam String city, @RequestParam String state,
+			@RequestParam String zip) {
+		Contact contact = contactRepository.findOne(id);
+		Address address = contact.getAddress();
+		contact.setName(name);
+		address.setStreet(street);
+		address.setCity(city);
+		address.setState(state);
+		address.setZip(zip);
+		contactRepository.save(contact);
+		return "redirect:contact?id=" + contact.getId();
+	}
+
+	@RequestMapping(value = "/contact", params = "delete", method = RequestMethod.POST)
+	public String postContact(@RequestParam long id) {
+		contactRepository.delete(id);
+		return "redirect:contacts";
 	}
 }
