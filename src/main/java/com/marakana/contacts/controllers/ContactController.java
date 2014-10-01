@@ -46,6 +46,15 @@ public class ContactController {
 		return "contact/view";
 	}
 
+	@RequestMapping(value = "/contact", params = "add", method = RequestMethod.POST)
+	public String postAddContact(@RequestParam String name,
+			@RequestParam String street, @RequestParam String city,
+			@RequestParam String state, @RequestParam String zip) {
+		Address address = new Address(street, city, state, zip);
+		Contact contact = new Contact(name, address);
+		contact = contactRepository.save(contact);
+		return "redirect:contact?id=" + contact.getId();
+	}
 	@RequestMapping(value="/contact", method=RequestMethod.POST)
 	public void postContact(HttpServletRequest request, 
 			HttpServletResponse response) throws ServletException, IOException {
