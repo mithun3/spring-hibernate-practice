@@ -26,7 +26,7 @@ public class ContactController {
 			HttpServletResponse response) throws IOException, ServletException{
 		request.setAttribute("contacts", contactRepository.findAll());
 		RequestDispatcher requestDispatcher = request
-				.getRequestDispatcher("view/contact/list");
+				.getRequestDispatcher("view/contact/list.jsp");
 		requestDispatcher.forward(request, response);
 	}
 	
