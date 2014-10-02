@@ -13,6 +13,6 @@
 		<li>${address.state} - ${address.zip}</li>
 	</ul>
 	<a href="contacts">back to contact list</a> |
-	<a href="person?edit&id=${person.id}">Edit person</a> | 
+	<a href="${person.url}&edit">Edit person</a> | 
 </body>
 </html>

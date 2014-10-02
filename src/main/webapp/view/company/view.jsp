@@ -10,6 +10,6 @@
 	<ul>
 	</ul>
 	<a href="contacts">back to contact list</a> |
-	<a href="company?edit&id=${company.id}">Edit company</a> | 
+	<a href="${company.url}&edit">Edit company</a> | 
 </body>
 </html>

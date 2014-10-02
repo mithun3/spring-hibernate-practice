@@ -9,7 +9,7 @@ import javax.persistence.InheritanceType;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Contact extends BaseEntity {
+public abstract class Contact extends BaseEntity {
 
 	@Column
 	private String name;
@@ -29,5 +29,7 @@ public class Contact extends BaseEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public abstract String getUrl();
 
 }
