@@ -6,8 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-import com.mithun.contacts.repositories.BaseEntity;
-
 @Entity
 public class Office extends BaseEntity {
 

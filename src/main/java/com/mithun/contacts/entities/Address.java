@@ -5,8 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import com.mithun.contacts.repositories.BaseEntity;
-
 @Entity
 public class Address extends BaseEntity {
 

@@ -11,6 +11,7 @@
 		</c:forEach>
 	</ul>
 
-	<a href="person?add">add contact</a>
+	<a href="person?add">add contact</a>|
+	<a href="company?add">add new company</a>  
 </body>
 </html>

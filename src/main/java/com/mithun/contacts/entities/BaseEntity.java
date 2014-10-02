@@ -1,4 +1,4 @@
-package com.mithun.contacts.repositories;
+package com.mithun.contacts.entities;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
