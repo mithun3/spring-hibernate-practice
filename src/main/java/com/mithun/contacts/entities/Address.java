@@ -5,12 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
-public class Address {
+import com.mithun.contacts.repositories.BaseEntity;
 
-	@Id
-	@GeneratedValue
-	private long id;
+@Entity
+public class Address extends BaseEntity {
+
 	@Column
 	private String street;
 	@Column
@@ -29,14 +28,6 @@ public class Address {
 		this.city = city;
 		this.state = state;
 		this.zip = zip;
-	}
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
 	}
 
 	public String getStreet() {
