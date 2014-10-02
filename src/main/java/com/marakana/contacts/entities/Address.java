@@ -20,7 +20,8 @@ public class Address {
 	@Column
 	private String zip;
 
-	public Address() {}
+	public Address() {
+	}
 
 	public Address(String street, String city, String state, String zip) {
 		super();

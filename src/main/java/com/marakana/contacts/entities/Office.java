@@ -4,33 +4,33 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.OneToOne;
 
 @Entity
-@Inheritance(strategy=InheritanceType.JOINED)
-public class Contact {
+public class Office {
 
 	@Id
 	@GeneratedValue
-	private long id;
+	private Long id;
 
 	@Column
 	private String name;
 
-	public Contact() {
+	@OneToOne
+	private Address address;
+
+	public Office() {
 	}
 
-	public Contact(String name) {
-		super();
-		this.name = name;
+	public Office(Address address) {
+		this.address = address;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -40,6 +40,14 @@ public class Contact {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
 }

@@ -1,11 +1,11 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-<title>add contacts</title>
+<title>add persons</title>
 </head>
 <body>
-	<h1>Contacts</h1>
-	<form action="contact" method="post">
+	<h1>persons</h1>
+	<form action="person" method="post">
 	<input type="hidden" name="add">
 		<ul>
 			<li>name : <input type="text" name="name"></li>
