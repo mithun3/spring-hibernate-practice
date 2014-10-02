@@ -7,13 +7,11 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
-@Entity
-@Inheritance(strategy=InheritanceType.JOINED)
-public class Contact {
+import com.mithun.contacts.repositories.BaseEntity;
 
-	@Id
-	@GeneratedValue
-	private long id;
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Contact extends BaseEntity {
 
 	@Column
 	private String name;
@@ -24,14 +22,6 @@ public class Contact {
 	public Contact(String name) {
 		super();
 		this.name = name;
-	}
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
 	}
 
 	public String getName() {
