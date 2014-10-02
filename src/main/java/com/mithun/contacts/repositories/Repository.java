@@ -1,11 +1,11 @@
-package com.marakana.contacts.repositories;
+package com.mithun.contacts.repositories;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
-import com.marakana.contacts.entities.Address;
+import com.mithun.contacts.entities.Address;
 
 public class Repository<E> {
 	 

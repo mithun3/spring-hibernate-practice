@@ -1,4 +1,4 @@
-package com.marakana.contacts.controllers;
+package com.mithun.contacts.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.marakana.contacts.entities.Address;
-import com.marakana.contacts.entities.Person;
-import com.marakana.contacts.repositories.PersonRepository;
+import com.mithun.contacts.entities.Address;
+import com.mithun.contacts.entities.Person;
+import com.mithun.contacts.repositories.PersonRepository;
 
 @Controller
 public class PersonController {

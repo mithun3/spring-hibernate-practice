@@ -1,4 +1,4 @@
-package com.marakana.contacts.entities;
+package com.mithun.contacts.entities;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;

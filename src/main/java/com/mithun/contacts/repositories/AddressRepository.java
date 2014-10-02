@@ -1,6 +1,6 @@
-package com.marakana.contacts.repositories;
+package com.mithun.contacts.repositories;
 
-import com.marakana.contacts.entities.Address;
+import com.mithun.contacts.entities.Address;
 
 //Database access
 
