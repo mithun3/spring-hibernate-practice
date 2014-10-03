@@ -10,9 +10,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class Company extends Contact {
 
-	@OneToMany
-	@JoinTable(joinColumns=@JoinColumn(name="company_id"),
-				inverseJoinColumns=@JoinColumn(name="office_id"))
+	@OneToMany(mappedBy="company")
 	private Set<Office> offices;
 
 	public Company() {}
