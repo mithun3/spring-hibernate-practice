@@ -5,8 +5,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
-import com.mithun.contacts.entities.Address;
-
 public class Repository<E> {
 	 
 	private final EntityManager entityManager = Persistence.createEntityManagerFactory("training").createEntityManager();
