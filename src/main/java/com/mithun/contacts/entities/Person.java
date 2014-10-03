@@ -25,8 +25,4 @@ public class Person extends Contact {
 		this.address = address;
 	}
 	
-	@Override
-	public String getUrl() {
-		return "person?id="+getId();
-	}
 }

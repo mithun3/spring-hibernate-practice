@@ -8,6 +8,9 @@
 	<input type="hidden" name="add">
 	<h2>${company.name}</h2>
 	<ul>
+		<c:forEach var="office" items="${company.offices}">
+			<li><a href="${office.url}">${office.name}</a></li>
+		</c:forEach>
 	</ul>
 	<a href="contacts">back to contact list</a> |
 	<a href="${company.url}&edit">Edit company</a> | 
