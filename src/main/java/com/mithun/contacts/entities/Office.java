@@ -20,7 +20,8 @@ public class Office extends BaseEntity {
 	public Office() {
 	}
 
-	public Office(Address address, Company company) {
+	public Office(String name, Address address, Company company) {
+		this.name = name;
 		this.address = address;
 		this.company = company;
 	}
